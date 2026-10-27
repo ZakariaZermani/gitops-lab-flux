@@ -1,0 +1,43 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImageUpdateAutomation
+metadata:
+  name: podinfo-image-update-automation
+  namespace: default
+spec:
+  git:
+    checkout:
+      ref:
+        branch: master
+    commit:
+      author:
+        email: flux@users.noreply.github.com
+        name: flux
+      messageTemplate: |-
+        Flux automated image update
+
+        Automation name: {{ .AutomationObject }}
+
+        Files:
+        {{ range $filename, $_ := .Updated.Files -}}
+        - {{ $filename }}
+        {{ end -}}
+
+        Objects:
+        {{ range $resource, $_ := .Updated.Objects -}}
+        - {{ $resource.Kind }} {{ $resource.Name }}
+        {{ end -}}
+
+        Images:
+        {{ range .Updated.Images -}}
+        - {{.}}
+        {{ end -}}
+    push:
+      branch: master
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: podinfo
+  update:
+    path: ./kustomize
+    strategy: Setters
