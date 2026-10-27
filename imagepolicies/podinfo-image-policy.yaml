@@ -6,7 +6,7 @@ metadata:
   namespace: default
 spec:
   imageRepositoryRef:
-    name: podinfo-image-ref
+    name: podinfo-image-repo
   policy:
     semver:
       range: '>6.11.x'
