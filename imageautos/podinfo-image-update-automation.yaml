@@ -19,18 +19,18 @@ spec:
         Automation name: {{ .AutomationObject }}
 
         Files:
-        {{ range $filename, $_ := .Changed.Files -}}
+        {{ range $filename, $_ := .Changed.FileChanges -}}
         - {{ $filename }}
         {{ end -}}
 
         Objects:
-        {{ range $resource, $_ := .Changed.Objects -}}
+        {{ range $resource, $changes := .Changed.Objects -}}
         - {{ $resource.Kind }} {{ $resource.Name }}
         {{ end -}}
 
-        Images:
-        {{ range .Changed.Images -}}
-        - {{.}}
+        Changes:
+        {{ range .Changed.Changes -}}
+        - {{ .OldValue }} -> {{ .NewValue }}
         {{ end -}}
     push:
       branch: master
