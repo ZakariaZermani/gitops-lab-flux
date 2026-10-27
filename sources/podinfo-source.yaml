@@ -10,4 +10,4 @@ spec:
     branch: master
   secretRef:
     name: gitops-lab-podinfo-auth
-  url: ssh://github.com/ZakariaZermani/podinfo
+  url: ssh://git@github.com/ZakariaZermani/podinfo
