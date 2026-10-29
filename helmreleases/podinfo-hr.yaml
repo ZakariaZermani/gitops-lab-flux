@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo-helm-repo
-      version: 6.16.0
+      version: 7.16.0
   interval: 1m0s
   upgrade:
     remediation:
