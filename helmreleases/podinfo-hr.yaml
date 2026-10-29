@@ -14,8 +14,17 @@ spec:
         name: podinfo-helm-repo
       version: 7.16.0
   interval: 1m0s
-  upgrade:
+  install:
     remediation:
-      retries: 3
+      retries: 2
+      remediateLastFailure: true
+  upgrade:
+    strategy:
+      name: 'RetryOnFailure'
+      retryInterval: 1m
+    remediation:
+      retries: 2
+      #strategy: 'uninstall'
+      #remediateLastFailure: false
   values:
     replicaCount: 3
