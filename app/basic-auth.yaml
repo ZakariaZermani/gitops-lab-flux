@@ -1,6 +1,7 @@
 apiVersion: v1
 data:
     password: ENC[AES256_GCM,data:4ZDtjwsUip17MOWb,iv:VCHFBXubBY6FGfhXspOoUxnmjMv+2xUnFb/KaxITWJU=,tag:H3RJsd16g1l+Yjf5hYqO7A==,type:str]
+    name: ENC[AES256_GCM,data:LKvBPWy6pg==,iv:2InfrFUooulyrGcLhqV35a2EqcMxIO1ViHbPRKQDvjw=,tag:/qvR9k7hyqUME3ERrZGlEQ==,type:str]
     user: ENC[AES256_GCM,data:BUkHCr1T5K4=,iv:Ww8EBPKAj6O/IMgfE24oNa6nQ6mh0tKwFYwOHB7StT4=,tag:1tkWtQ+Y9vPMG1RwyrPvgQ==,type:str]
 kind: Secret
 metadata:
@@ -8,8 +9,8 @@ metadata:
     namespace: default
 sops:
     encrypted_regex: ^(data|stringData)$
-    lastmodified: "2026-10-29T10:32:57Z"
-    mac: ENC[AES256_GCM,data:AY/K1oPEndzou+f46FXJLkbZfQF0zq21woTucmTO8S3PRzOsUMC+s7fnltmj27eBhR1X7gpns6acwlZMlg8oTxeLagLe/SsYgFsDdU6GycwV2w4b9juHvPDcRscxDJ5reBzJvg+SkVWsmcm5UCcDO1KT89kO9oW+cD3Qi+0ph1U=,iv:vlzUEJQ9Hin8L8oH586f+gn6/EsPlci9vim9jx2WmDg=,tag:GvSUNcvr0oQS/vMpmgZfpQ==,type:str]
+    lastmodified: "2026-10-29T11:32:01Z"
+    mac: ENC[AES256_GCM,data:rqnSn650Yp4bn3LtCWWupPnP4JsFwjX1x0o+eBB+Y6UqySJiWKzPT274gMyk4JIiwofRQBLhNxsOUgH0hpvYvJaCXZbcloZtGRL3z0P6FSI3hTzzVG86T/3G0G6nOcQO/kK77pBU5nX4/MXZzdXbRm03ypypkSoXuMeTR6qrp24=,iv:HkzgesWj/ffapcAzYJQL1Z23XDJLqFoYXe0Sjlv2Kg0=,tag:g6ikbbAaS9yBgTZZatyl9Q==,type:str]
     pgp:
         - created_at: "2026-10-29T10:32:57Z"
           enc: |-
