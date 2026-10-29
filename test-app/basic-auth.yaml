@@ -1,16 +1,16 @@
 apiVersion: v1
-data:
-    password: ENC[AES256_GCM,data:4ZDtjwsUip17MOWb,iv:VCHFBXubBY6FGfhXspOoUxnmjMv+2xUnFb/KaxITWJU=,tag:H3RJsd16g1l+Yjf5hYqO7A==,type:str]
-    name: ENC[AES256_GCM,data:LKvBPWy6pg==,iv:2InfrFUooulyrGcLhqV35a2EqcMxIO1ViHbPRKQDvjw=,tag:/qvR9k7hyqUME3ERrZGlEQ==,type:str]
-    user: ENC[AES256_GCM,data:BUkHCr1T5K4=,iv:Ww8EBPKAj6O/IMgfE24oNa6nQ6mh0tKwFYwOHB7StT4=,tag:1tkWtQ+Y9vPMG1RwyrPvgQ==,type:str]
+stringData:
+    password: ENC[AES256_GCM,data:kIo/TgCK2dpFadDk,iv:/p2FOEyvaDTGes8pWyM7zQKOmkMDRI47mLic53Ar02k=,tag:WH0Ex2hr71oiqx7zksyxtQ==,type:str]
+    name: ENC[AES256_GCM,data:nG9A4p6B9g==,iv:nc18XKZmkgK66sEgxpYxNUC3RFi5u3OJU+B39vyU0Rg=,tag:GQvaD9dG8fqZjOQ5BZfj1Q==,type:str]
+    user: ENC[AES256_GCM,data:Q2TTtSVWtDY=,iv:bxBFcgooFNF3IkenW1R7W+LBvuUtGgqd3ooswvaJeAc=,tag:hfqMP2Sci9dalaPDkw3Q9w==,type:str]
 kind: Secret
 metadata:
     name: basic-auth
     namespace: default
 sops:
     encrypted_regex: ^(data|stringData)$
-    lastmodified: "2026-10-29T11:32:01Z"
-    mac: ENC[AES256_GCM,data:rqnSn650Yp4bn3LtCWWupPnP4JsFwjX1x0o+eBB+Y6UqySJiWKzPT274gMyk4JIiwofRQBLhNxsOUgH0hpvYvJaCXZbcloZtGRL3z0P6FSI3hTzzVG86T/3G0G6nOcQO/kK77pBU5nX4/MXZzdXbRm03ypypkSoXuMeTR6qrp24=,iv:HkzgesWj/ffapcAzYJQL1Z23XDJLqFoYXe0Sjlv2Kg0=,tag:g6ikbbAaS9yBgTZZatyl9Q==,type:str]
+    lastmodified: "2026-10-29T13:19:10Z"
+    mac: ENC[AES256_GCM,data:oyFZWVQAdPg93HH+I3TnSkV5zVKCGCvQhmxf5RZBhaUGTBZqK+yz3Iqiwdw+mNQEiY76s+0rlZMA849DcgKIzLRwgrMAmWQtAVrPUtfhOEbJE2bsytsDX1dArGbPJULsvyHxOu7gHuj1sYtb6O0AC/MF9ztdO7IrnL9dbi1JWrY=,iv:5vnUhcEJwpZ7kQDE/nKsWTfhePW/yTCJ17wwtEQ5wqg=,tag:iALs/LkgVndpDx57R1w0iw==,type:str]
     pgp:
         - created_at: "2026-10-29T10:32:57Z"
           enc: |-
